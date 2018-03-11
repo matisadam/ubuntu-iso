@@ -99,7 +99,7 @@ while true; do
                 break;;
         [3]* )  download_file="ubuntu-$xenn-server-amd64.iso"
                 download_location="http://releases.ubuntu.com/$xenn/"
-                new_iso_name="ubuntu-$xenn-server-amd64-unattended.iso"
+                new_iso_name="ubuntu-$ubuntuserver.iso"
                 break;;
         * ) echo " please answer [1], [2] or [3]";;
     esac
