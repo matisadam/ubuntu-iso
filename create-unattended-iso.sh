@@ -149,11 +149,11 @@ if [[ ! -f $tmp/$download_file ]]; then
 	exit 1
 fi
 
-# download netson seed file
-seed_file="netson.seed"
+# download ubuntu.seed file
+seed_file="ubuntu.seed"
 if [[ ! -f $tmp/$seed_file ]]; then
     echo -n " downloading $seed_file: "
-    download "https://raw.githubusercontent.com/netson/ubuntu-unattended/master/$seed_file"
+    download "https://raw.githubusercontent.com/englert/ubuntu-iso/master/$seed_file"
 fi
 
 # install required packages
