@@ -1,0 +1,75 @@
+localhost              ansible_connection=local
+
+v112 ansible_host=192.168.0.112
+
+u100 ansible_host=192.168.0.100 
+u101 ansible_host=192.168.0.101 
+u102 ansible_host=192.168.0.102 
+u103 ansible_host=192.168.0.103 
+u104 ansible_host=192.168.0.104 
+u105 ansible_host=192.168.0.105 
+u106 ansible_host=192.168.0.106 
+u107 ansible_host=192.168.0.107 
+u108 ansible_host=192.168.0.108 
+u109 ansible_host=192.168.0.109 
+u110 ansible_host=192.168.0.110 
+u111 ansible_host=192.168.0.111 
+u112 ansible_host=192.168.0.112 
+u113 ansible_host=192.168.0.113
+u114 ansible_host=192.168.0.114 
+u115 ansible_host=192.168.0.115 
+u116 ansible_host=192.168.0.116 
+u117 ansible_host=192.168.0.117 
+u118 ansible_host=192.168.0.118 
+u119 ansible_host=192.168.0.119 
+u120 ansible_host=192.168.0.120 
+u121 ansible_host=192.168.0.121 
+u122 ansible_host=192.168.0.122 
+u123 ansible_host=192.168.0.123 
+u124 ansible_host=192.168.0.124 
+u125 ansible_host=192.168.0.125 
+u126 ansible_host=192.168.0.126 
+u127 ansible_host=192.168.0.127 
+u128 ansible_host=192.168.0.128 
+u129 ansible_host=192.168.0.129 
+u130 ansible_host=192.168.0.130 
+
+amazon1 ansible_host=52.59.217.167
+
+docker1 ansible_host=www.unibox.hu
+
+[vbox]
+v112
+[vbox:vars]
+ansible_port=22 
+ansible_connection=ssh 
+ansible_python_interpreter=/usr/bin/python3
+ansible_user=ubuntu
+
+
+[tim]
+u[101:130]
+[tim:vars]
+ansible_port=22 
+ansible_connection=ssh 
+ansible_python_interpreter=/usr/bin/python3
+ansible_user=sis
+
+
+[ubuntu]
+server1
+
+[ubuntu:vars]
+ansible_port=22
+ansible_connection=ssh
+ansible_python_interpreter=/usr/bin/python3
+
+[amazon]
+amazon1
+
+[amazon:vars]
+ansible_port=22
+ansible_connection=ssh
+ansible_user=ubuntu
+ansible_ssh_private_key_file=/home/sis/.ssh/amazon1.pem
+ansible_python_interpreter=/usr/bin/python3
