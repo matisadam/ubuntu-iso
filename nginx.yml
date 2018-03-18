@@ -1,0 +1,21 @@
+---
+- name: Install nginx
+  hosts: amazon1
+  become: true
+
+  tasks:
+  
+  - name: Install nginx
+    apt:
+      name: nginx
+      state: present
+
+  - name: Insert Index Page
+    template:
+      src: index.html
+      dest: /usr/share/nginx/html/index.html
+
+  - name: Start NGiNX
+    service:
+      name: nginx
+      state: started
